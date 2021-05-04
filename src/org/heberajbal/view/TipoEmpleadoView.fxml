@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="631.0" style="-fx-background-color: #3a3042;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.heberajbal.controller.TipoEmpleadoController">
+   <children>
+      <TableView fx:id="tblTipoEmpleado" layoutX="38.0" layoutY="174.0" onKeyReleased="#selecionarElemento" onMouseClicked="#selecionarElemento" prefHeight="200.0" prefWidth="560.0" stylesheets="@../resource/TableView.css">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoEmpleado" prefWidth="107.0" text="Código Empleado" />
+          <TableColumn fx:id="colDescripcion" prefWidth="452.0" text="Descripción " />
+        </columns>
+      </TableView>
+      <Label layoutX="208.0" layoutY="12.0" text="Tipo de empleado " textFill="#edffd9">
+         <font>
+            <Font name="Baskerville Old Face" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="82.0" text="Código Empleado " textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="122.0" text="Descripción " textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoTipoEmpleado" editable="false" layoutX="182.0" layoutY="81.0" prefHeight="29.0" prefWidth="389.0" style="-fx-background-color: #edffd9;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDescripcion" editable="false" layoutX="136.0" layoutY="120.0" prefHeight="29.0" prefWidth="436.0" style="-fx-background-color: #edffd9;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnNuevo" layoutX="39.0" layoutY="412.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="194.0" layoutY="412.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="351.0" layoutY="412.0" mnemonicParsing="false" onAction="#editar" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="506.0" layoutY="412.0" mnemonicParsing="false" onAction="#Reporte" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Reporte" />
+      <Label layoutX="65.0" layoutY="161.0" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="69.0" layoutY="38.0" prefHeight="3.0" prefWidth="138.0" />
+      <Separator layoutX="69.0" layoutY="28.0" prefHeight="3.0" prefWidth="138.0" />
+      <Separator layoutX="434.0" layoutY="28.0" prefHeight="3.0" prefWidth="119.0" />
+      <Separator layoutX="434.0" layoutY="38.0" prefHeight="3.0" prefWidth="119.0" />
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="5.0" layoutY="4.0" onMouseClicked="#ventanaEmpleados" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="85.0" layoutX="549.0" layoutY="4.0" onMouseClicked="#ventanaEmpleados" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/cocina.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

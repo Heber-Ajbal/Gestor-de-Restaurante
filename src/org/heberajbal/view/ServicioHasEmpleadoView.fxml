@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="725.0" style="-fx-background-color: #3a3042;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.heberajbal.controller.ServicioHasEmpleadoController">
+   <children>
+      <TableView fx:id="tblServicioHasEmpleado" layoutX="29.0" layoutY="207.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="200.0" prefWidth="668.0" stylesheets="@../resource/TableView.css">
+        <columns>
+          <TableColumn fx:id="colCodigoServicio" prefWidth="108.0" text="Código Servicio" />
+          <TableColumn fx:id="colCodigoEmpleado" prefWidth="124.0" text="Código Empleado" />
+            <TableColumn fx:id="colHoraEvento" prefWidth="146.0" text="Hora Evento" />
+            <TableColumn fx:id="colLugarEvento" prefWidth="160.0" text="Lugar Evento" />
+            <TableColumn fx:id="colFechaEvento" prefWidth="140.0" text="Fecha Evento" />
+        </columns>
+      </TableView>
+      <Label layoutX="227.0" layoutY="12.0" text="Servicio has Empleado" textFill="#edffd9">
+         <font>
+            <Font name="Baskerville Old Face" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="72.0" text="Código Servicio " textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="112.0" text="Código Empleado" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="161.0" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="69.0" layoutY="38.0" prefHeight="3.0" prefWidth="154.0" />
+      <Separator layoutX="69.0" layoutY="28.0" prefHeight="3.0" prefWidth="154.0" />
+      <Separator layoutX="501.0" layoutY="28.0" prefHeight="3.0" prefWidth="186.0" />
+      <Separator layoutX="501.0" layoutY="38.0" prefHeight="3.0" prefWidth="186.0" />
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="5.0" layoutY="4.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/flecha.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCodigoServicio" layoutX="192.0" layoutY="72.0" prefHeight="25.0" prefWidth="154.0" />
+      <ComboBox fx:id="cmbCodigoEmpleado" layoutX="192.0" layoutY="112.0" prefHeight="25.0" prefWidth="154.0" />
+      <Label layoutX="207.0" layoutY="156.0" text="Fecha de evento" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="grpFechaEvento" layoutX="362.0" layoutY="152.0" prefHeight="30.0" prefWidth="154.0" stylesheets="@../resource/DatePicker.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Label layoutX="377.0" layoutY="72.0" text="Hora evento" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHoraEvento" editable="false" layoutX="481.0" layoutY="72.0" prefHeight="25.0" prefWidth="164.0" />
+      <TextField fx:id="txtLugarEvento" editable="false" layoutX="479.0" layoutY="112.0" prefHeight="25.0" prefWidth="164.0" />
+      <Label layoutX="375.0" layoutY="112.0" text="Lugar evento" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnReporte" layoutX="594.0" layoutY="423.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Reporte " />
+      <Button fx:id="btnEditar" layoutX="416.0" layoutY="423.0" mnemonicParsing="false" onAction="#Editar" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="226.0" layoutY="423.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Eliminar" />
+      <Button fx:id="btnNuevo" layoutX="47.0" layoutY="423.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Nuevo" />
+   </children>
+</AnchorPane>

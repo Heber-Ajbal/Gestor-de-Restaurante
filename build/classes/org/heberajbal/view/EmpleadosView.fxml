@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="880.0" style="-fx-background-color: #3a3042;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.heberajbal.controller.EmpleadosController">
+   <children>
+      <Label text="Label" />
+      <Label layoutX="368.0" layoutY="11.0" styleClass="labeld" stylesheets="@../resource/objetos.css" text="Empleados">
+         <font>
+            <Font name="Baskerville Old Face" size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblEmpleados" layoutX="22.0" layoutY="260.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="833.0" stylesheets="@../resource/TableView.css">
+        <columns>
+          <TableColumn fx:id="colcodigoEmpleado" prefWidth="74.0" text="Código " />
+          <TableColumn fx:id="colnumeroEmpleado" prefWidth="71.0" text="Número " />
+            <TableColumn fx:id="colnombresEmpleado" prefWidth="140.0" text="Nombre" />
+            <TableColumn fx:id="colapellidosEmpleado" prefWidth="127.0" text="Apelldido " />
+            <TableColumn fx:id="coldireccion" prefWidth="109.0" text="Dirección" />
+            <TableColumn fx:id="coltelefono" prefWidth="93.0" text="Télefono " />
+            <TableColumn fx:id="colgradoCocinero" prefWidth="120.0" text="Grado cocinero" />
+            <TableColumn fx:id="coltipoEmpleado" prefWidth="98.0" text="Tipo Empleado" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtcodigoEmpleado" editable="false" layoutX="166.0" layoutY="94.0" prefHeight="25.0" prefWidth="235.0" />
+      <Label layoutX="22.0" layoutY="93.0" styleClass="labeld" stylesheets="@../resource/objetos.css" text="Código Empleado">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnumeroEmpleado" editable="false" layoutX="166.0" layoutY="130.0" prefHeight="25.0" prefWidth="235.0" />
+      <TextField fx:id="txtnombresEmpleado" editable="false" layoutX="99.0" layoutY="165.0" prefHeight="25.0" prefWidth="302.0" />
+      <Label layoutX="22.0" layoutY="130.0" styleClass="labeld" stylesheets="@../resource/objetos.css" text="Número Empleado">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="165.0" styleClass="labeld" stylesheets="@../resource/objetos.css" text="Nombres">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="199.0" styleClass="labeld" stylesheets="@../resource/objetos.css" text="Apellidos">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtapellidosEmpleados" editable="false" layoutX="99.0" layoutY="199.0" prefHeight="25.0" prefWidth="302.0" />
+      <Label layoutX="430.0" layoutY="93.0" styleClass="labeld" stylesheets="@../resource/objetos.css" text="Dirección ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="430.0" layoutY="130.0" styleClass="labeld" stylesheets="@../resource/objetos.css" text="Télefono">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtdireccion" editable="false" layoutX="506.0" layoutY="94.0" prefHeight="25.0" prefWidth="335.0" />
+      <TextField fx:id="txttelefono" editable="false" layoutX="506.0" layoutY="130.0" prefHeight="25.0" prefWidth="335.0" />
+      <Label layoutX="430.0" layoutY="165.0" styleClass="labeld" stylesheets="@../resource/objetos.css" text="Grado cocinero">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtgradoCocinero" editable="false" layoutX="552.0" layoutY="165.0" prefHeight="25.0" prefWidth="290.0" />
+      <Label layoutX="430.0" layoutY="199.0" styleClass="labeld" stylesheets="@../resource/objetos.css" text="Codigo Tipo de empleado">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbtipoEmpleado" layoutX="633.0" layoutY="199.0" prefHeight="25.0" prefWidth="207.0" />
+      <Button fx:id="btnNuevo" layoutX="70.0" layoutY="481.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="291.0" layoutY="481.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="520.0" layoutY="481.0" mnemonicParsing="false" onAction="#editar" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="725.0" layoutY="481.0" mnemonicParsing="false" onAction="#reporte" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Reporte" />
+      <ImageView fitHeight="63.0" fitWidth="62.0" layoutX="26.0" layoutY="1.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/flecha.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="105.0" layoutY="38.0" prefHeight="3.0" prefWidth="251.0" />
+      <Separator layoutX="105.0" layoutY="27.0" prefHeight="3.0" prefWidth="251.0" />
+      <Separator layoutX="510.0" layoutY="27.0" prefHeight="3.0" prefWidth="335.0" />
+      <Separator layoutX="510.0" layoutY="38.0" prefHeight="3.0" prefWidth="335.0" />
+   </children>
+</AnchorPane>

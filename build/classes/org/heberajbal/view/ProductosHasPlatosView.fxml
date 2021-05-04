@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="631.0" style="-fx-background-color: #3a3042;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.heberajbal.controller.ProductoHasPlatoController">
+   <children>
+      <TableView fx:id="tblProductoHasPlato" layoutX="38.0" layoutY="174.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="560.0" stylesheets="@../resource/TableView.css">
+        <columns>
+          <TableColumn fx:id="colCodigoProducto" prefWidth="272.0" text="Código Producto " />
+          <TableColumn fx:id="colCodigoPlato" prefWidth="287.0" text="Código Plato" />
+        </columns>
+      </TableView>
+      <Label layoutX="209.0" layoutY="10.0" text="Producto has Platos" textFill="#edffd9">
+         <font>
+            <Font name="Baskerville Old Face" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="82.0" text="Código Producto" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="122.0" text="Código Plato" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="161.0" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="69.0" layoutY="38.0" prefHeight="3.0" prefWidth="138.0" />
+      <Separator layoutX="69.0" layoutY="28.0" prefHeight="3.0" prefWidth="138.0" />
+      <Separator layoutX="450.0" layoutY="28.0" prefHeight="3.0" prefWidth="163.0" />
+      <Separator layoutX="450.0" layoutY="38.0" prefHeight="3.0" prefWidth="163.0" />
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="5.0" layoutY="4.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/flecha.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCodigoPlato" layoutX="279.0" layoutY="82.0" prefHeight="25.0" prefWidth="200.0" />
+      <ComboBox fx:id="cmbCodigoProducto" layoutX="279.0" layoutY="122.0" prefHeight="25.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

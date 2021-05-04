@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteServicio" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6e230cff-63bc-434b-bad7-9e5efded91fe">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codServicio" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\obdul\\Documents\\NetBeansProjects\\TonysKinal2019010\\src\\org\\heberajbal\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call  sp_ReporteServicio($P{codServicio})]]>
+	</queryString>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionTipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="79" uuid="46813fc3-b776-452a-97ce-e8f12de309ca"/>
+				<imageExpression><![CDATA["C:\\Users\\obdul\\Documents\\NetBeansProjects\\TonysKinal2019010\\src\\org\\heberajbal\\image\\pngocean.com.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="62" width="100" height="17" uuid="9790f6fe-0018-41b5-ba7e-db8231b21622"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[TONY'S KINAL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="76" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="10" y="0" width="80" height="62" uuid="a3aefcbb-fed7-4b77-b367-50ec0f31367b"/>
+				<imageExpression><![CDATA["C:\\Users\\obdul\\Documents\\NetBeansProjects\\TonysKinal2019010\\src\\org\\heberajbal\\image\\tienda.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="0" width="556" height="20" uuid="1ad1041d-2da9-4a4b-a46e-f07fcc6b7d74"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[REPORTE SERVICIO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="1" y="2" width="555" height="20" backcolor="#3A3042" uuid="2b32080f-8dc4-4882-b821-828e416d00dd"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="19" y="2" width="100" height="20" forecolor="#FFFFFF" uuid="0b6036a5-502f-4ca0-9d36-369b996c87e9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<text><![CDATA[cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="2" width="100" height="20" forecolor="#FFFFFF" uuid="12e77312-7000-41b6-a05e-e43921630ae9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<text><![CDATA[DescripcionTipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="2" width="128" height="20" forecolor="#FFFFFF" uuid="d7b43b91-1b18-42d8-8dad-53b6dc3550e2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<text><![CDATA[Nombre del Producto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="24" y="0" width="100" height="20" uuid="0341c3f8-ed78-4528-ac14-257742f3f0d4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="213" y="0" width="100" height="20" uuid="c349f8fe-1d90-4f82-8121-e8258beaaf5c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{descripcionTipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="0" width="100" height="20" uuid="05447bcc-57cc-4b55-bd45-875c7ff8a504"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="20" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="94">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="9" width="555" height="85" uuid="1321048a-3240-48c7-b2c3-0f5ff3661c16"/>
+				<imageExpression><![CDATA["C:\\Users\\obdul\\Documents\\NetBeansProjects\\TonysKinal2019010\\src\\org\\heberajbal\\image\\1.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

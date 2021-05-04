@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="576.0" style="-fx-background-color: #3a3042;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.heberajbal.controller.ProductoController">
+   <children>
+      <ImageView fitHeight="70.0" fitWidth="95.0" layoutX="9.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/flecha.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="245.0" layoutY="13.0" text="Productos" textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="83.0" layoutY="39.0" prefHeight="3.0" prefWidth="156.0" />
+      <Separator layoutX="83.0" layoutY="28.0" prefHeight="3.0" prefWidth="156.0" />
+      <Separator layoutX="374.0" layoutY="28.0" prefHeight="3.0" prefWidth="192.0" />
+      <Separator layoutX="374.0" layoutY="39.0" prefHeight="3.0" prefWidth="192.0" />
+      <Label layoutX="50.0" layoutY="155.0" text="Cantidad" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCantidad" editable="false" layoutX="140.0" layoutY="155.0" prefHeight="25.0" prefWidth="330.0" />
+      <Label layoutX="49.0" layoutY="122.0" text="Nombre" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" editable="false" layoutX="140.0" layoutY="123.0" prefHeight="25.0" prefWidth="330.0" />
+      <TextField fx:id="txtCodigoProducto" editable="false" layoutX="186.0" layoutY="91.0" prefHeight="25.0" prefWidth="283.0" />
+      <Label layoutX="49.0" layoutY="89.0" text="Código Producto" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="37.0" layoutY="375.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="177.0" layoutY="375.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="313.0" layoutY="375.0" mnemonicParsing="false" onAction="#Editar" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="453.0" layoutY="375.0" mnemonicParsing="false" onAction="#reporte" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Reporte " />
+      <TableView fx:id="tblProducto" layoutX="35.0" layoutY="196.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="169.0" prefWidth="503.0" stylesheets="@../resource/TableView.css">
+         <columns>
+            <TableColumn fx:id="colCodigoProducto" prefWidth="124.0" text="Código" />
+            <TableColumn fx:id="colNombre" prefWidth="165.0" text="Nombre" />
+            <TableColumn fx:id="colCantidad" prefWidth="213.0" text="Cantidad" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

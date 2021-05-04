@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="670.0" style="-fx-background-color: #3a3042;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.heberajbal.controller.TipoPlatoController">
+   <children>
+      <Button fx:id="btnNuevo" layoutX="52.0" layoutY="358.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="195.0" layoutY="358.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="351.0" layoutY="358.0" mnemonicParsing="false" onAction="#editar" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="517.0" layoutY="358.0" mnemonicParsing="false" onAction="#reporte" prefHeight="55.0" prefWidth="85.0" stylesheets="@../resource/objetos.css" text="Reporte " />
+      <TableView fx:id="tblTipoPlatos" layoutX="54.0" layoutY="159.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="183.0" prefWidth="569.0" stylesheets="@../resource/TableView.css">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoPlato" prefWidth="104.0" text="Código" />
+          <TableColumn fx:id="colDescripcion" prefWidth="464.0" text="Descripción " />
+        </columns>
+      </TableView>
+      <Label layoutX="218.0" layoutY="14.0" text="Tipo de Plato" textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="87.0" layoutY="39.0" prefHeight="3.0" prefWidth="127.0" />
+      <Separator layoutX="87.0" layoutY="28.0" prefHeight="3.0" prefWidth="127.0" />
+      <Separator layoutX="387.0" layoutY="28.0" prefHeight="3.0" prefWidth="156.0" />
+      <Separator layoutX="387.0" layoutY="39.0" prefHeight="3.0" prefWidth="156.0" />
+      <TextField fx:id="txtCodigoTipoPlato" editable="false" layoutX="220.0" layoutY="74.0" prefHeight="25.0" prefWidth="318.0" />
+      <Label layoutX="50.0" layoutY="74.0" text="Código TIpo de plato" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDescripcion" editable="false" layoutX="153.0" layoutY="114.0" prefHeight="25.0" prefWidth="382.0" />
+      <Label layoutX="49.0" layoutY="114.0" text="Descripción " textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="70.0" fitWidth="95.0" layoutX="10.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="97.0" fitWidth="101.0" layoutX="562.0" layoutY="3.0" onMouseClicked="#ventanaPlato" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/comida.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

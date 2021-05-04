@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="670.0" style="-fx-background-color: #3a3042;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.heberajbal.controller.EmpresaController">
+   <children>
+      <Label layoutX="278.0" layoutY="12.0" prefHeight="39.0" prefWidth="117.0" text="Empresas" textFill="#edffd9">
+         <font>
+            <Font name="Baskerville Old Face" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="70.0" text="Código Empresa" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="106.0" prefHeight="25.0" prefWidth="132.0" text="Nombre Empresa" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="141.0" prefHeight="25.0" prefWidth="75.0" text="Dirección" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="172.0" text="Teléfono" textFill="#edffd9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoEmpresa" editable="false" layoutX="169.0" layoutY="68.0" prefHeight="29.0" prefWidth="384.0" style="-fx-background-color: #edffd9;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNombreEmpresa" editable="false" layoutX="169.0" layoutY="103.0" prefHeight="29.0" prefWidth="384.0" style="-fx-background-color: #edffd9;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDireccionEmpresa" editable="false" layoutX="111.0" layoutY="137.0" prefHeight="29.0" prefWidth="442.0" style="-fx-background-color: #edffd9;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtTelefono" editable="false" layoutX="111.0" layoutY="171.0" prefHeight="29.0" prefWidth="442.0" style="-fx-background-color: #edffd9;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tblEmpresas" layoutX="32.0" layoutY="212.0" onKeyReleased="#selecionarElemento" onMouseClicked="#selecionarElemento" prefHeight="200.0" prefWidth="596.0" style="-fx-background-color: #edffd9;" stylesheets="@../resource/TableView.css">
+        <columns>
+          <TableColumn fx:id="colCodigoEmpresa" text="Código " />
+          <TableColumn fx:id="colNombreEmpresa" prefWidth="156.0" text="Nombre Empresa" />
+            <TableColumn fx:id="colDireccionEmpresa" minWidth="0.0" prefWidth="236.0" text="Dirección" />
+            <TableColumn fx:id="colTelefono" prefWidth="123.0" text="Teléfono" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="60.0" layoutY="428.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="55.0" prefWidth="85.0" style="-fx-border-radius: 1.5em; -fx-background-radius: 1.5em; -fx-background-color: #DB9D47;" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="200.0" layoutY="428.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="55.0" prefWidth="85.0" style="-fx-background-color: #DB9D47; -fx-border-radius: 1.5em; -fx-background-radius: 1.5em;" text="Eliminar " />
+      <Button fx:id="btnEditar" layoutX="360.0" layoutY="428.0" mnemonicParsing="false" onAction="#editar" prefHeight="55.0" prefWidth="85.0" style="-fx-background-color: #DB9D47; -fx-border-radius: 1.5em; -fx-background-radius: 1.5em;" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="520.0" layoutY="428.0" mnemonicParsing="false" onAction="#Reporte" prefHeight="55.0" prefWidth="85.0" style="-fx-background-color: #DB9D47; -fx-border-radius: 1.5em; -fx-background-radius: 1.5em;" text="Reporte" />
+      <Separator layoutX="73.0" layoutY="36.0" prefHeight="9.0" prefWidth="201.0" />
+      <Separator layoutX="398.0" layoutY="34.0" prefHeight="12.0" prefWidth="189.0" />
+      <Separator layoutX="398.0" layoutY="24.0" prefHeight="12.0" prefWidth="189.0" />
+      <Separator layoutX="73.0" layoutY="26.0" prefHeight="9.0" prefWidth="201.0" />
+      <ImageView fitHeight="55.0" fitWidth="60.0" layoutX="12.0" layoutY="6.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/flecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="85.0" layoutX="587.0" layoutY="3.0" onMouseClicked="#ventanaPresupuesto" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/cuenta.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="85.0" layoutX="580.0" layoutY="101.0" onMouseClicked="#ventanaServicio" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/camarero.png" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow color="#100519" />
+   </effect>
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.heberajbal.controller.DatosProgramadorController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="249.0" style="-fx-background-color: #0f0e17;">
+         <children>
+            <Button fx:id="btnProgramador" layoutX="32.0" layoutY="177.0" mnemonicParsing="false" onAction="#about" prefHeight="43.0" prefWidth="186.0" style="-fx-background-color: transparent;" text="Programador" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAdministracion" layoutX="34.0" layoutY="256.0" mnemonicParsing="false" onAction="#about" prefHeight="38.0" prefWidth="186.0" style="-fx-background-color: transparent;" text="Administracion" textFill="#f5f5f5">
+               <font>
+                  <Font name="Bauhaus 93" size="22.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="138.0" fitWidth="147.0" layoutX="54.0" layoutY="5.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icono.png" />
+               </image>
+               <effect>
+                  <DropShadow height="30.0" radius="14.5" width="30.0" />
+               </effect>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow height="21.23" radius="10.115" width="21.23" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="249.0" prefHeight="400.0" prefWidth="375.0" style="-fx-background-color: #0f0e17;">
+         <children>
+            <Label fx:id="lbldatosProgramador" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="13.0" prefHeight="68.0" prefWidth="353.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNombre" alignment="CENTER" layoutX="127.0" layoutY="100.0" prefHeight="27.0" prefWidth="147.0" styleClass="labelDatos" stylesheets="@../resource/objetos.css" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblApellido" alignment="CENTER" layoutX="117.0" layoutY="150.0" prefHeight="27.0" prefWidth="164.0" styleClass="labelDatos" stylesheets="@../resource/objetos.css" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCorreo" alignment="CENTER" layoutX="73.0" layoutY="200.0" prefHeight="27.0" prefWidth="255.0" styleClass="labelDatos" stylesheets="@../resource/objetos.css" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
